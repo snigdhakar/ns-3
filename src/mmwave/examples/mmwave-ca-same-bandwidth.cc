@@ -28,9 +28,9 @@ main (int argc, char *argv[])
   bool useCa = true;
   double ueDist = 50;
   bool blockage = false;
-  double totalBandwidth = 800e6;
-  double frequency0 = 28e9;
-  double frequency1 = 73e9;
+  double totalBandwidth = 1000e6;
+  double frequency0 = 39750e6;
+  double frequency1 = 40250e6;
   double simTime = 5;
   std::string condition = "l"; // channel condition, l = LOS, n = NLOS, otherwise the condition is randomly determined
 
