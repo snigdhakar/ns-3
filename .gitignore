@@ -40,4 +40,5 @@ build-dir/
 build/
 /.cproject
 /.project
-.vscode/settings.json
+.vscode
+.vscode/c_cpp_properties.json
