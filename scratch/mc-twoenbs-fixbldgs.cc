@@ -316,11 +316,11 @@ main (int argc, char *argv[])
   DoubleValue doubleValue;
   //EnumValue enumValue;
   GlobalValue::GetValueByName ("numBlocks", uintegerValue);
-  uint32_t numBlocks = uintegerValue.Get ();
+  //uint32_t numBlocks = uintegerValue.Get ();
   GlobalValue::GetValueByName ("maxXAxis", doubleValue);
-  double maxXAxis = doubleValue.Get ();
+  //double maxXAxis = doubleValue.Get ();
   GlobalValue::GetValueByName ("maxYAxis", doubleValue);
-  double maxYAxis = doubleValue.Get ();
+  //double maxYAxis = doubleValue.Get ();
 
   double ueInitialPosition = 100;
   double ueFinalPosition = 110;
