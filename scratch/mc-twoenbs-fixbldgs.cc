@@ -276,7 +276,7 @@ static ns3::GlobalValue g_x2Latency ("x2Latency", "Latency on X2 interface (us)"
 static ns3::GlobalValue g_mmeLatency ("mmeLatency", "Latency on MME interface (us)",
                                       ns3::DoubleValue (10000), ns3::MakeDoubleChecker<double> ());
 static ns3::GlobalValue g_mobileUeSpeed ("mobileSpeed", "The speed of the UE (m/s)",
-                                         ns3::DoubleValue (100), ns3::MakeDoubleChecker<double> ());
+                                         ns3::DoubleValue (25), ns3::MakeDoubleChecker<double> ());
 static ns3::GlobalValue g_rlcAmEnabled ("rlcAmEnabled", "If true, use RLC AM, else use RLC UM",
                                         ns3::BooleanValue (true), ns3::MakeBooleanChecker ());
 static ns3::GlobalValue g_maxXAxis ("maxXAxis", "The maximum X coordinate for the area in which to deploy the buildings",
@@ -323,7 +323,7 @@ main (int argc, char *argv[])
   //double maxYAxis = doubleValue.Get ();
 
   double ueInitialPosition = 100;
-  double ueFinalPosition = 110;
+  double ueFinalPosition = 125;
 
   // Variables for the RT
   int windowForTransient = 150; // number of samples for the vector to use in the filter
@@ -370,7 +370,7 @@ main (int argc, char *argv[])
   double ueSpeed = doubleValue.Get ();
 
   double transientDuration = double(vectorTransient) / 1000000;
-  double simTime = transientDuration + ((double)ueFinalPosition - (double)ueInitialPosition) / ueSpeed + 0.1;
+  double simTime = transientDuration + ((double)ueFinalPosition - (double)ueInitialPosition) / ueSpeed + 0.5;
 
   NS_LOG_UNCOND ("rlcAmEnabled " << rlcAmEnabled << " bufferSize " << bufferSize << " interPacketInterval " <<
                  interPacketInterval << " x2Latency " << x2Latency << " mmeLatency " << mmeLatency << " mobileSpeed " << ueSpeed);
@@ -644,7 +644,7 @@ main (int argc, char *argv[])
   mmwaveHelper->EnableTraces ();
 
   // set to true if you want to print the map of buildings, ues and enbs
-  bool print = false;
+  bool print = true;
   if (print)
     {
       PrintGnuplottableBuildingListToFile ("buildings.txt");
