@@ -633,7 +633,7 @@ main (int argc, char *argv[])
   clientApps.Stop (Seconds (simTime - 1));
 
   Simulator::Schedule (Seconds (transientDuration), &ChangeSpeed, ueNodes.Get (0), Vector (ueSpeed, 0, 0)); // start UE movement after Seconds(0.5)
-  Simulator::Schedule (Seconds (simTime - 1), &ChangeSpeed, ueNodes.Get (0), Vector (0, 0, 0)); // start UE movement after Seconds(0.5)
+  Simulator::Schedule (Seconds (simTime - 0.1), &ChangeSpeed, ueNodes.Get (0), Vector (0, 0, 0)); // start UE movement after Seconds(0.5)
 
   double numPrints = 0;
   for (int i = 0; i < numPrints; i++)
