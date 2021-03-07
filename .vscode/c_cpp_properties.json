@@ -4,7 +4,7 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "C:\\Users\\prabo\\OneDrive\\Desktop\\Research_Related\\1. Research Topics\\ns-3\\ns3-mmwave\\build"
+                "C:\\Users\\Snigdha\\Desktop\\5G\\ns3-mmwave\\build"
 
             ],
             "defines": [
